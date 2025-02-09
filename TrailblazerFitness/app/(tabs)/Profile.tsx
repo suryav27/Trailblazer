@@ -9,6 +9,7 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export default function TabTwoScreen() {
   return (
+    <ThemedView style={styles.parallaxContainer}>
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1C4FD', dark: '#A1C4FD' }}
       headerImage={
@@ -16,7 +17,8 @@ export default function TabTwoScreen() {
           source={require('@/assets/images/party_6521522.png')}
           style={styles.headerImage}
         />
-      }>
+      }
+      >
       <ThemedView style={styles.titleContainer}>
           <ThemedText style={styles.titleColor}>My Profile</ThemedText>
       </ThemedView>
@@ -44,50 +46,58 @@ export default function TabTwoScreen() {
         <ThemedText style={styles.Inside}>
           - Snake-N-Boot Swimming    1/07/2025
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Detailed Info</ThemedText>
-        </ExternalLink>
+          <ThemedText type="link">More...</ThemedText>
       </Collapsible>
       </ThemedView>
       <ThemedView style={styles.CollapsibleContainer}>
       <Collapsible title={<ThemedText style={styles.titleCollapsible}> Devices Connected</ThemedText>}>
-        <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
+      <ThemedText style={styles.Inside}>
+          - Apple Watch Series 10
         </ThemedText>
+        <ThemedText style={styles.Inside}>
+          - iPhone 15
+        </ThemedText>
+        <ThemedText type="link">Connect Device</ThemedText>
       </Collapsible>
       </ThemedView>
       <ThemedView style={styles.CollapsibleContainer}>
       <Collapsible title={<ThemedText style={styles.titleCollapsible}> Friends</ThemedText>}>
-        <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
+        <ThemedText style={styles.Inside}>
+          3 Friends 
         </ThemedText>
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+        <ThemedText style={styles.Inside}>
+          Online: 0 Friends
+        </ThemedText>
+          <ThemedText type="link">View Photos</ThemedText>
       </Collapsible>
       </ThemedView>
       <ThemedView style={styles.CollapsibleContainer}>
       <Collapsible title={<ThemedText style={styles.titleCollapsible}> Rewards</ThemedText>}>
-      <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
+      <ThemedText style={styles.Inside}>
+      🏆 The Iron Horseshoe
         </ThemedText>
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+        <ThemedText style={styles.Inside}>
+      🏆 Outlaw's Victory 
+        </ThemedText>
+        <ThemedText style={styles.Inside}>
+      🏆 Lasso Legend
+        </ThemedText>
+        <ThemedText style={styles.Inside}>
+      🏆 Golden Spur
+        </ThemedText>
+          <ThemedText type="link">More...</ThemedText>
       </Collapsible>
       </ThemedView>
     </ParallaxScrollView>
+    </ThemedView>
   );
 }
 
 const styles = StyleSheet.create({
+  parallaxContainer:{
+    backgroundColor: '#F5F5DC',
+    flex: 1
+  },
   headerImage: {
     color: '#A1C4FD',
     bottom: -15,
